@@ -26,9 +26,11 @@
     <footer class="bg-gray-50 px-6 mt-auto text-gray-500 text-sm">
         <div class="container mx-auto">
             <li class="flex w-full flex-row justify-between">
+                @if(auth()->user())
                 <a href="#">
                     {{ Auth::user()->name }}
                 </a>
+                @endif
 
                 <div>
                     <a href="{{ route('logout') }}"  class="p-1 px-2 rounded-md bg-gray-200"
